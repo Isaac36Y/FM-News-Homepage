@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
@@ -17,75 +17,88 @@
 <body>
 <div class="container">
   <header class="header">
-    <a href="/"><img src="./assets/images/logo.svg" alt="logo"></a>
-    <nav class="header__nav" aria-label="Primary">
-      <ul class="header__unordered">
-        <li class="header__list" aria-current="page">Home</li>
-        <li class="header__list">New</li>
-        <li class="header__list">Popular</li>
-        <li class="header__list">Trending</li>
-        <li class="header__list">Categories</li>
-      </ul>
+    <img src="./assets/images/logo.svg" alt="logo" aria-label="Logo" class="header__img">
+    <div class="menu-overlay" id="menu-overlay" hidden></div>
+    <nav class="header__nav" aria-label="Primary"> 
+      <button type="button" aria-controls="header-slider" aria-expanded="false" class="header__menu-open" id="menu-open-btn"><img src="./assets/images/icon-menu.svg" alt="open-navigation"></button>
+        <div class="header__slider" id="header-slider" hidden>
+          <button type="button" class="header__menu-close" id="menu-close-btn"><img src="./assets/images/icon-menu-close.svg" alt=""></button>
+          <ul role="list" class="header__unordered | text-preset55">
+            <li class="header__list " aria-current="page"><a href="">Home</a></li>
+            <li class="header__list"><a href="">New</a></li>
+            <li class="header__list"><a href="">Popular</a></li>
+            <li class="header__list"><a href="">Trending</a></li>
+            <li class="header__list"><a href="">Categories</a></li>
+          </ul>
+        </div>
     </nav>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">News Homepage</h1>
+    <h1 class="sr-only">News Homepage</h1>
     <section class="future" aria-labelledby="future-header" aria-describedby="future-description">
-      <h2 class="future__header" id="future-header">The Bright Future of Web 3.0?</h2>
-      <p class="future__par" id="future-description">
+      <picture class="future__img">
+        <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 400px)">
+        <img src="./assets/images/image-web-3-mobile.jpg" alt="">
+      </picture>
+      <h2 class="future__header | text-preset2" id="future-header">The Bright Future of Web 3.0?</h2>
+      <p class="future__par | text-preset6" id="future-description">
         We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
         But is it really fulfilling its promise?
       </p>
-      <button type="button" class="future__button">Read more</button>
+      <button type="button" class="future__button | text-preset7">READ MORE</button>
     </section>
   
     <section class="new" aria-labelledby="new-header">
-      <h2 class="new__header" id="new-header">New</h2>
-      <ul class="new__unordered">
+      <h2 class="new__header | text-preset3" id="new-header">New</h2>
+      <ul role="list" class="new__unordered">
         <li class="new__list">
-          <h3 class="new__list-header">Hydrogen VS Electric Cars</h3>
-          <p class="new__list-par">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <h3 class="new__list-header | text-preset4">Hydrogen VS Electric Cars</h3>
+          <p class="new__list-par | text-preset6">Will hydrogen-fueled cars ever catch up to EVs?</p>
         </li>
         <hr>
         <li class="new__list">
-          <h3 class="new__list-header">The Downsides of AI Artistry</h3>
-          <p class="new__list-par">What are the possible adverse effects of on-demand AI image generation?</p>
+          <h3 class="new__list-header | text-preset4">The Downsides of AI Artistry</h3>
+          <p class="new__list-par | text-preset6">What are the possible adverse effects of on-demand AI image generation?</p>
         </li>
         <hr>
         <li class="new__list">
-          <h3 class="new__list-header">Is VC Funding Drying Up?</h3>
-          <p class="new__list-par">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          <h3 class="new__list-header | text-preset4">Is VC Funding Drying Up?</h3>
+          <p class="new__list-par | text-preset6">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </li>
       </ul>
     </section>
   
       <section class="popular" aria-labelledby="popular-header">
-        <h2 class="visually-hidden" id="popular-header">Popular topics</h2>
-        <ol class="popular__ordered">
+        <h2 class="sr-only" id="popular-header">Popular topics</h2>
+        <ol role="list" class="popular__ordered">
           <li class="popular__list">
-            <h3 class="popular__list-header">
-              01<br>
-              <span class="popular__list-span">Reviving Retro PCs</span>
-            </h3>
-            <p class="popular__list-par">What happens when old PCs are given modern upgrades?</p>
+            <img src="./assets/images/image-retro-pcs.jpg" alt="old computer" class="popular__img" width="100">
+            <div class="popular__text-container">
+              <span class="popular__list-span | text-preset3">01</span>
+                <h3 class="popular__list-header | text-preset5">Reviving Retro PCs</h3>
+              <p class="popular__list-par | text-preset6">What happens when old PCs are given modern upgrades?</p>
+            </div>
           </li>
           <li class="popular__list">
-            <h3 class="popular__list-header">
-              02<br>
-              <span class="popular__list-span">Top 10 Laptops of 2022</span>
-            </h3>
-            <p class="popular__list-par">Our best picks for various needs and budgets.</p>
+            <img src="./assets/images/image-top-laptops.jpg" alt="close up on a keyboard" class="popular__img" width="100">
+            <div class="popular__text-container">
+              <span class="popular__list-span | text-preset3">02</span>
+                <h3 class="popular__list-header | text-preset5">Top 10 Laptops of 2022</h3>
+              <p class="popular__list-par | text-preset6">Our best picks for various needs and budgets.</p>
+            </div>
           </li>
           <li class="popular__list">
-            <h3 class="popular__list-header">
-              03<br>
-              <span class="popular__list-span">The Growth of Gaming</span>
-            </h3>
-            <p class="popular__list-par">How the pandemic has sparked fresh opportunities.</p>
+            <img src="./assets/images/image-gaming-growth.jpg" alt="console controller hovering" class="popular__img" width="100">
+            <div class="popular__text-container">
+              <span class="popular__list-span | text-preset3">03</span>
+                <h3 class="popular__list-header | text-preset5">The Growth of Gaming</h3>
+              <p class="popular__list-par | text-preset6">How the pandemic has sparked fresh opportunities.</p>
+            </div>
           </li>
         </ol>
       </section>
-</div>
+  </div>
 </main>
+<script src="script.js"></script>
 </body>
 </html>
