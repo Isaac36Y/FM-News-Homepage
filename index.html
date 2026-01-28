@@ -20,10 +20,10 @@
     <img src="./assets/images/logo.svg" alt="logo" aria-label="Logo" class="header__img">
     <div class="menu-overlay" id="menu-overlay" hidden></div>
     <nav class="header__nav" aria-label="Primary"> 
-      <button type="button" aria-controls="header-slider" aria-expanded="false" class="header__menu-open" id="menu-open-btn"><img src="./assets/images/icon-menu.svg" alt="open-navigation"></button>
+      <button type="button" aria-controls="header-slider" aria-expanded="false" class="header__menu-open" id="menu-open-btn" aria-label="Open Navigation Menu"><img src="./assets/images/icon-menu.svg" alt="open navigation"></button>
         <div class="header__slider" id="header-slider">
-          <button type="button" class="header__menu-close" id="menu-close-btn"><img src="./assets/images/icon-menu-close.svg" alt=""></button>
-          <ul role="list" class="header__unordered | text-preset55">
+          <button type="button" class="header__menu-close" id="menu-close-btn" aria-label="Close Navigation Menu"><img src="./assets/images/icon-menu-close.svg" alt="close navigation"></button>
+          <ul class="header__unordered | text-preset55">
             <li class="header__list " aria-current="page"><a href="">Home</a></li>
             <li class="header__list"><a href="">New</a></li>
             <li class="header__list"><a href="">Popular</a></li>
@@ -52,17 +52,17 @@
   
     <section class="new" aria-labelledby="new-header">
       <h2 class="new__header | text-preset3" id="new-header">New</h2>
-      <ul role="list" class="new__unordered">
+      <ul class="new__unordered">
         <li class="new__list">
           <h3 class="new__list-header | text-preset4">Hydrogen VS Electric Cars</h3>
           <p class="new__list-par | text-preset6">Will hydrogen-fueled cars ever catch up to EVs?</p>
         </li>
-        <hr>
+        <li><hr></li>
         <li class="new__list">
           <h3 class="new__list-header | text-preset4">The Downsides of AI Artistry</h3>
           <p class="new__list-par | text-preset6">What are the possible adverse effects of on-demand AI image generation?</p>
         </li>
-        <hr>
+        <li><hr></li>
         <li class="new__list">
           <h3 class="new__list-header | text-preset4">Is VC Funding Drying Up?</h3>
           <p class="new__list-par | text-preset6">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
@@ -72,7 +72,7 @@
   
       <section class="popular" aria-labelledby="popular-header">
         <h2 class="sr-only" id="popular-header">Popular topics</h2>
-        <ol role="list" class="popular__ordered">
+        <ol class="popular__ordered">
           <li class="popular__list one">
             <img src="./assets/images/image-retro-pcs.jpg" alt="old computer" class="popular__img" width="100" height="127">
             <div class="popular__text-container">
