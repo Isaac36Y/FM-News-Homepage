@@ -21,7 +21,7 @@
     <div class="menu-overlay" id="menu-overlay" hidden></div>
     <nav class="header__nav" aria-label="Primary"> 
       <button type="button" aria-controls="header-slider" aria-expanded="false" class="header__menu-open" id="menu-open-btn"><img src="./assets/images/icon-menu.svg" alt="open-navigation"></button>
-        <div class="header__slider" id="header-slider" hidden>
+        <div class="header__slider" id="header-slider">
           <button type="button" class="header__menu-close" id="menu-close-btn"><img src="./assets/images/icon-menu-close.svg" alt=""></button>
           <ul role="list" class="header__unordered | text-preset55">
             <li class="header__list " aria-current="page"><a href="">Home</a></li>
@@ -41,11 +41,13 @@
         <img src="./assets/images/image-web-3-mobile.jpg" alt="">
       </picture>
       <h2 class="future__header | text-preset2" id="future-header">The Bright Future of Web 3.0?</h2>
-      <p class="future__par | text-preset6" id="future-description">
-        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
-        But is it really fulfilling its promise?
-      </p>
-      <button type="button" class="future__button | text-preset7">READ MORE</button>
+      <div class="par-container">
+        <p class="future__par | text-preset6" id="future-description">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+          But is it really fulfilling its promise?
+        </p>
+        <button type="button" class="future__button | text-preset7">READ MORE</button>
+      </div>
     </section>
   
     <section class="new" aria-labelledby="new-header">
@@ -71,24 +73,24 @@
       <section class="popular" aria-labelledby="popular-header">
         <h2 class="sr-only" id="popular-header">Popular topics</h2>
         <ol role="list" class="popular__ordered">
-          <li class="popular__list">
-            <img src="./assets/images/image-retro-pcs.jpg" alt="old computer" class="popular__img" width="100">
+          <li class="popular__list one">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="old computer" class="popular__img" width="100" height="127">
             <div class="popular__text-container">
               <span class="popular__list-span | text-preset3">01</span>
                 <h3 class="popular__list-header | text-preset5">Reviving Retro PCs</h3>
               <p class="popular__list-par | text-preset6">What happens when old PCs are given modern upgrades?</p>
             </div>
           </li>
-          <li class="popular__list">
-            <img src="./assets/images/image-top-laptops.jpg" alt="close up on a keyboard" class="popular__img" width="100">
+          <li class="popular__list two">
+            <img src="./assets/images/image-top-laptops.jpg" alt="close up on a keyboard" class="popular__img" width="100" height="127">
             <div class="popular__text-container">
               <span class="popular__list-span | text-preset3">02</span>
                 <h3 class="popular__list-header | text-preset5">Top 10 Laptops of 2022</h3>
               <p class="popular__list-par | text-preset6">Our best picks for various needs and budgets.</p>
             </div>
           </li>
-          <li class="popular__list">
-            <img src="./assets/images/image-gaming-growth.jpg" alt="console controller hovering" class="popular__img" width="100">
+          <li class="popular__list three">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="console controller hovering" class="popular__img" width="100" height="127">
             <div class="popular__text-container">
               <span class="popular__list-span | text-preset3">03</span>
                 <h3 class="popular__list-header | text-preset5">The Growth of Gaming</h3>

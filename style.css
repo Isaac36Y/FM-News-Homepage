@@ -37,11 +37,6 @@
 }
  /* utilities */ 
 
-.text-preset1 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    font-weight: var(--fw-extra-bold);
-}
 .text-preset2 {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -132,6 +127,8 @@ a {
 
 .container {
     padding: 1.8rem 1rem;
+    max-width: 40rem;
+    margin-inline: auto;
 }
 
 .header__menu-open, .header__menu-close, .future__button {
@@ -161,17 +158,23 @@ a {
     width: 2.9rem;
 }
 
-
-
-.header__slider {
+@media (max-width: 1000px) {
+    .header__slider {
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 15rem;
+    width: max(40vw, 15rem);
     background-color: var(--white);
     padding: 10rem 1.5rem; 
     z-index: 20;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+    }
+    .header__slider.open {
+        transform: translateX(0);
+    }
 }
 
 .header__menu-close {
@@ -217,10 +220,16 @@ a {
     background-color: var(--red500);
 }
 
+.par-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 /* new */ 
 
 .new {
-    background-color: var(--black);
+    background-color: var(--navy950);
     padding: 1.7rem 1.3rem;
 }
 
@@ -256,7 +265,7 @@ hr {
 .popular__list {
     display: flex;
     gap: 1.5rem;
-    
+    align-items: center;
 }
 
 .popular__text-container {
@@ -270,8 +279,92 @@ hr {
     color: var(--red500)
 }
 
-@media (min-width: 376px) {
-    
+@media (min-width: 1000px) {
+    .container {
+        padding-block: clamp(1rem, 6vw, 7.1rem);
+        max-width: 71.5rem;
+    }
+
+    .header__menu-open, .header__menu-close {
+        display: none;
+    }
+    .header {
+        margin-inline: 0.2rem;
+        margin-block-end: 3.5rem;
+    }
+
+    .header__img {
+        width: 4rem;
+    }
+
+    .header__slider {
+        visibility: visible !important; /* had to use important. JS changes the html visibility style so if you open and close the menu on a smaller screen then increase screen size, the menu would stay hidden */
+    }
+
+    .header__unordered {
+        flex-direction: row;
+        gap: 2.5rem;
+        font-size: .9375rem;
+        line-height: 1.625rem;
+    }
+   
+    .main { 
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem
+    }
+
+    .future {
+        grid-column: 1 / 3;
+        display: grid; 
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .future__img {
+        grid-column: 1 / 3;
+    }
+    .future__header {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        font-weight: var(--fw-extra-bold);
+    }
+   /*  .par-container {
+        justify-content: space-between;
+    } */
+
+    .new {
+        padding-block-start: 2.4rem;
+    }
+
+    .new__header {
+        font-size: 2.5rem;
+    }
+
+    .popular {
+        grid-column: 1 / 4;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-block-start: 3rem;
+    }
+
+    .popular ol {
+        display: contents;
+    }
+
+     .header__unordered li:hover, .popular__list h3:hover {
+        color: var(--red500);
+        cursor: pointer;
+    }
+    .new h3:hover {
+        color: var(--gold400);
+        cursor: pointer;
+    }
+
+    .future__button:hover {
+        background-color: var(--navy950);
+        color: var(--white);
+        cursor: pointer;
+    }
 }
 
 
