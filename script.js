@@ -33,5 +33,3 @@ menuOverlay.addEventListener('click', () => {
         openMenuBtn.focus()
     }, 500);
 })
-
-

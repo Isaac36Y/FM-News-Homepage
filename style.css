@@ -17,7 +17,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/static/Inter-Regular.ttf'); 
+  src: url('./assets/fonts/inter-v20-latin/inter-v20-latin-regular.woff2') format('woff2'); 
 }
 
 @font-face {
@@ -25,7 +25,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/static/Inter-Bold.ttf'); 
+  src: url('./assets/fonts/inter-v20-latin/inter-v20-latin-700.woff2') format('woff2'); 
 }
 
 @font-face {
@@ -33,7 +33,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
-  src: url('./assets/fonts/static/Inter-ExtraBold.ttf'); 
+  src: url('./assets/fonts/inter-v20-latin/inter-v20-latin-800.woff2') format('woff2'); 
 }
  /* utilities */ 
 
